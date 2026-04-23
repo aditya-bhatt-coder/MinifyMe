@@ -5,15 +5,17 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.Builder;
 
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "short_url")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "short_url")
+@Builder
 public class ShortURL {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
